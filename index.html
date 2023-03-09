@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh_cn" class="isdrag">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="dns-prefetch" href="//www.chacuo.net">
+        <link rel="dns-prefetch" href="//hm.baidu.com">
+        <link rel="dns-prefetch" href="//cpro.baidu.com">
+        <link rel="dns-prefetch" href="//pos.baidu.com">
+
+        <title>在线3DES加密解密、3DES在线加密解密、3DES encryption and decryption--查错网</title>
+        <meta name="Keywords" content="在线3DES加密解密、3DES在线加密解密、3DES encryption and decryption">
+        <meta name="Description" content="在线3DES加密解密、3DES在线加密解密、3DES encryption and decryption">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+    <body>
+        <div class="convert  alert-info alert">
+            <div>
+                <label class="f14 bold">3DES加密模式:</label>
+                <select prop="m" class="h30">
+                    <option value="ecb">ECB</option>
+                    <option value="cbc">CBC</option>
+                    <option value="ctr">CTR</option>
+                    <option value="ofb">OFB</option>
+                    <option value="cfb">CFB</option>
+                </select> &nbsp;
+                <label class="f14 bold">填充:</label>
+                <select prop="pad" class="h30">
+                    <option value="pkcs5">pkcs5padding</option>
+                    <option value="pkcs7">pkcs7padding</option>
+                    <option value="zero" selected="">zeropadding</option>
+                    <option value="iso10126">iso10126</option>
+                    <option value="ansix923">ansix923</option>
+                    <option value="no">no padding</option>
+                </select>
+                &nbsp;
+                <label class="f14 bold">密码:</label>
+                <input type="text" prop="p" valid="{&quot;minlength&quot;:1}" tipsinfo="请输入密码！" title="请输入密码！" class="inline-block sareainput f16p " style="color: rgb(153, 153, 153);">
+                <label class="f14 bold">偏移量:</label>
+                <input type="text" prop="i" tipsinfo="iv偏移量，ecb模式不用填写！" title="iv偏移量，ecb模式不用填写！" class="inline-block sareainput f16p " style="color: rgb(153, 153, 153);">
+                <label class="f14 bold">输出:</label>
+                <select prop="o" class="h30">
+                    <option value="0">base64</option>
+                    <option value="1">hex</option>
+                </select>
+                <label class="f14 bold p_l10">
+                    字符集：
+                </label>
+                <select prop="s" class="h30" style="max-width: 100px;">
+                    <option value="gb2312">gb2312编码（简体）</option>
+                    <option value="gbk">gbk编码（简繁体）</option>
+                    <option value="gb18030">gb18030编码（中日韩）</option>
+                    <option value="utf-8">utf8编码（unicode编码）</option>
+                    <option value="iso-8859-1">iso-8859-1(单字节)</option>
+                </select>
+            </div>
+            <div class="m_t10">
+                 <span class="l">待加密、解密的文本:</span>
+                <a class="ui-icon ui-icon-copy l" title="复制" forid="converts" data-clipboard-text="欢迎来到chacuo.net"></a>
+                <a class="ui-icon ui-icon-close l" title="清除" forid="converts"></a>&nbsp;&nbsp;&nbsp;
+            </div>
+            <textarea id="converts" name="converts" source="true" drag="text" class="textarea f14 blue" valid="{&quot;minlength&quot;:1}" title="请输入需要转换文本！" tipsinfo="请输入需要转换文本！">欢迎来到chacuo.net</textarea><div style="color:red;margin-top:-5px;margin-left: 20px;">↑ 将你电脑文件直接拖入试试^-^ </div>
+            <input id="t" prop="t" type="hidden" value="0">
+             <div class="tc">
+                <input type="button" value="3DES加密" title="3DES加密" wait="正在处理，稍后..." class="btn f14 h30" arg="3des" onclick="javascript:$(&#39;#t&#39;).val(0);">&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" value="3DES解密" title="3DES解密" wait="正在处理，稍后..." class="btn f14 h30" arg="3des" onclick="javascript:$(&#39;#t&#39;).val(1);">
+            </div>
+            <div class="inline-block clearfix m_t10">
+                <span id="formatinfo" class="r"></span>
+                <span class="l">3DES加密、解密转换结果(base64了):</span>
+                <a class="ui-icon ui-icon-copy l" title="复制" forid="convertd" data-clipboard-text=""></a>
+                <a class="ui-icon ui-icon-close l" title="清除" forid="convertd"></a>
+                <a class="ui-icon ui-icon-transferthick-e-w l" title="填充到输入框" forid="convertd" toid="converts"></a>
+            </div>
+            <textarea name="convertd" id="convertd" class="textarea f14 blue" destin="true"></textarea>
+        </div>
+    </body>
+</html>
